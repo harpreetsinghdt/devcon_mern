@@ -14,6 +14,7 @@ import Post from './components/post/Post';
 import PrivateRoute from './components/routing/PrivateRoute';
 import AddExperience from './components/profile-forms/AddExperience';
 import AddEducation from './components/profile-forms/AddEducation';
+import NotFound from './components/layout/NotFound';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -39,11 +40,11 @@ const App = () => {
           <Navbar />
           <Alert />
           <Routes>
-            <Route exact path="/" element={<Landing />} />
+            <Route path="/" element={<Landing />} />
             <Route path="register" element={<Register />} />
             <Route path="login" element={<Login />} />
             <Route path="posts" element={<PrivateRoute component={Posts} />} />
-          <Route path="posts/:id" element={<PrivateRoute component={Post} />} />
+            <Route path="posts/:id" element={<PrivateRoute component={Post} />} />
             <Route path="profiles" element={<Profiles />} />
             <Route path="profile/:id" element={<Profile />} />
             <Route path="dashboard" element={<PrivateRoute component={Dashboard} />} />
@@ -51,6 +52,7 @@ const App = () => {
             <Route path="edit-profile" element={<PrivateRoute component={ProfileForm} />} />
             <Route path="add-experience" element={<PrivateRoute component={AddExperience} />} />
             <Route path="add-education" element={<PrivateRoute component={AddEducation} />} />
+            <Route path="/*" element={<NotFound/>} />
           </Routes>
         </Fragment>
       </Router>
