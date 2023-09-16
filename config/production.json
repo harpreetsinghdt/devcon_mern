@@ -1,0 +1,6 @@
+{
+	"mongoURI":"mongodb+srv://harpreete87:Ferry1river@cluster0.xna8wif.mongodb.net/?retryWrites=true&w=majority",
+	"jwtSecret": "newsecrettoken",
+	"githubClientId": "Iv1.c8e664b958928c4a",
+	"githubSecret": "42868a1ff6554a228925eee8040223679880ddae"
+}
